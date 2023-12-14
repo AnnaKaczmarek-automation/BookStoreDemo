@@ -1,0 +1,17 @@
+browser:
+  browserName: chrome
+  headlessBrowser: false
+  webElementTimeOut: 15
+
+environment:
+  test1:
+    active: true
+    envName: test1
+    appUrl: https://demoqa.com/books/
+    eTitle: Selenium
+
+  test2:
+    active: false
+    envName: test2
+    appUrl: https://demoqa.com/books/
+    eTitle: Selenium

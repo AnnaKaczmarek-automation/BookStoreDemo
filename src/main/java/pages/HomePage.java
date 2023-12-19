@@ -10,11 +10,13 @@ public class HomePage extends  BasePage {
         super(driver);
     }
 
-    @FindBy(css = "#login" )
-    private WebElement loginButton;
+    @FindBy(xpath = "//a[text()='Sign In']" )
+    private WebElement signInButton;
 
-    public void clickOnLoginButton(){
-        waitForVisibility(loginButton);
-        clickOnElement(loginButton);
+
+    public void clickOnSignIn(){
+        waitForVisibility(signInButton);
+        clickOnElement(signInButton);
     }
+
 }

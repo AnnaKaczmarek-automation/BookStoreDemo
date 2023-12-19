@@ -25,6 +25,8 @@ public class DriverFactory {
                 ChromeOptions optionsChrome = new ChromeOptions();
                 WebDriverManager.chromedriver().setup();
                 optionsChrome.addArguments("start-maximized");
+                optionsChrome.addArguments("disable-infobars");
+                optionsChrome.addArguments("--disable-extensions");
                 driver = new ChromeDriver(optionsChrome);
                 driver.get(System.getProperty("appUrl"));
                 break;
@@ -32,6 +34,8 @@ public class DriverFactory {
                 FirefoxOptions optionsFirefox = new FirefoxOptions();
                 WebDriverManager.firefoxdriver().setup();
                 optionsFirefox.addArguments("start-maximized");
+                optionsFirefox.addArguments("disable-infobars");
+                optionsFirefox.addArguments("--disable-extensions");
                 driver = new FirefoxDriver(optionsFirefox);
                 driver.get(System.getProperty("appUrl"));
                 break;

@@ -1,17 +1,13 @@
 browser:
   browserName: chrome
   headlessBrowser: false
-  webElementTimeOut: 15
+  webElementTimeOut: 25
 
 environment:
   test1:
     active: true
     envName: test1
-    appUrl: https://demoqa.com/books/
+    appUrl: https://petstore.octoperf.com/actions/Catalog.action
     eTitle: Selenium
 
-  test2:
-    active: false
-    envName: test2
-    appUrl: https://demoqa.com/books/
-    eTitle: Selenium
+

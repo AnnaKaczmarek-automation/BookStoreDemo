@@ -1,0 +1,1963 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Fri Dec 15 12:02:22 CET 2023</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Thread">Thread</td>
+<td class="Level">Level</td>
+<td class="Logger">Logger</td>
+<td class="Message">Message</td>
+</tr>
+
+
+<tr class="info even">
+<td class="Thread">main</td>
+<td class="Level">INFO</td>
+<td class="Logger">ApplicationProperties.class</td>
+<td class="Message">Amount of loaded environment properties is: 3</td>
+</tr>
+
+<tr class="info odd">
+<td class="Thread">main</td>
+<td class="Level">INFO</td>
+<td class="Logger">ApplicationProperties.class</td>
+<td class="Message">Amount of loaded browser properties is: 3</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.github.bonigarcia.wdm.cache.ResolutionCache</td>
+<td class="Message">Resolution chrome=120 in cache (valid until 12:51:52 15/12/2023 CET)</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.github.bonigarcia.wdm.cache.ResolutionCache</td>
+<td class="Message">Removing resolution chrome120=120.0.6099.71 from cache (expired on Fri Dec 15 12:02:20 CET 2023)</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ex-00000001: preparing request execution</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.protocol.RequestAddCookies</td>
+<td class="Message">Cookie spec selected: strict</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.protocol.RequestAuthCache</td>
+<td class="Message">Auth cache not set in the context</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.ProtocolExec</td>
+<td class="Message">ex-00000001: target auth state: UNCHALLENGED</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.ProtocolExec</td>
+<td class="Message">ex-00000001: proxy auth state: UNCHALLENGED</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.ConnectExec</td>
+<td class="Message">ex-00000001: acquiring connection with route {s}-&gt;https://chromedriver.storage.googleapis.com:443</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ex-00000001: acquiring endpoint (3 MINUTES)</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ex-00000001: endpoint lease request (3 MINUTES) [route: {s}-&gt;https://chromedriver.storage.googleapis.com:443][total available: 0; route allocated: 0 of 5; total allocated: 0 of 25]</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ex-00000001: endpoint leased [route: {s}-&gt;https://chromedriver.storage.googleapis.com:443][total available: 0; route allocated: 1 of 5; total allocated: 1 of 25]</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ex-00000001: acquired ep-00000000</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ex-00000001: acquired endpoint ep-00000000</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.ConnectExec</td>
+<td class="Message">ex-00000001: opening connection {s}-&gt;https://chromedriver.storage.googleapis.com:443</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ep-00000000: connecting endpoint (30 SECONDS)</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ep-00000000: connecting endpoint to https://chromedriver.storage.googleapis.com:443 (30 SECONDS)</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator</td>
+<td class="Message">http-outgoing-0: connecting to chromedriver.storage.googleapis.com/216.58.215.91:443</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message">Connecting socket to chromedriver.storage.googleapis.com/216.58.215.91:443 with timeout 30 SECONDS</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message">Enabled protocols: [TLSv1.3, TLSv1.2]</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message">Enabled cipher suites: [TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA]</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message">Starting handshake</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message">Secure session established</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message"> negotiated protocol: TLSv1.2</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message"> negotiated cipher suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message"> peer principal: CN=*.storage.googleapis.com</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message"> peer alternative names: [*.storage.googleapis.com, *.googleapis.com, commondatastorage.googleapis.com, *.commondatastorage.googleapis.com, storage.googleapis.com, storage-p2.googleapis.com, *.storage-p2.googleapis.com, storage.mtls.googleapis.com, *.appspot.com.storage.googleapis.com, *.content-storage.googleapis.com, *.content-storage-p2.googleapis.com, *.content-storage-upload.googleapis.com, *.content-storage-download.googleapis.com, *.storage-upload.googleapis.com, *.storage-download.googleapis.com]</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message"> issuer principal: CN=GTS CA 1C3, O=Google Trust Services LLC, C=US</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator</td>
+<td class="Message">http-outgoing-0: connection established 192.168.1.53:58808&lt;-&gt;216.58.215.91:443</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ep-00000000: connected http-outgoing-0</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ep-00000000: endpoint connected</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.MainClientExec</td>
+<td class="Message">ex-00000001: executing GET /LATEST_RELEASE_120 HTTP/1.1</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ep-00000000: start execution ex-00000001</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ep-00000000: executing exchange ex-00000001 over http-outgoing-0</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-0 &gt;&gt; GET /LATEST_RELEASE_120 HTTP/1.1</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-0 &gt;&gt; user-agent: Apache-HttpClient/5.0</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-0 &gt;&gt; accept-encoding: gzip, deflate, br</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-0 &gt;&gt; cache-control: max-age=0</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-0 &gt;&gt; connection: keep-alive</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-0 &gt;&gt; Host: chromedriver.storage.googleapis.com</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-0 &gt;&gt; &quot;GET /LATEST_RELEASE_120 HTTP/1.1[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-0 &gt;&gt; &quot;user-agent: Apache-HttpClient/5.0[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-0 &gt;&gt; &quot;accept-encoding: gzip, deflate, br[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-0 &gt;&gt; &quot;cache-control: max-age=0[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-0 &gt;&gt; &quot;connection: keep-alive[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-0 &gt;&gt; &quot;Host: chromedriver.storage.googleapis.com[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-0 &gt;&gt; &quot;[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;HTTP/1.1 404 Not Found[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;X-GUploader-UploadID: ABPtcPphGCIPMXps-9HbdnOxmXCwyEgKvATzoSXlwj0Eb6HVVPCKRF4Kb2h7Vx0YnbgK_tcb4uL9EbQZBw[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;Content-Type: application/xml; charset=UTF-8[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;Content-Length: 193[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;Date: Fri, 15 Dec 2023 11:02:23 GMT[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;Expires: Fri, 15 Dec 2023 11:02:23 GMT[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;Cache-Control: private, max-age=0[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;Server: UploadServer[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;Alt-Svc: h3=&quot;:443&quot;; ma=2592000,h3-29=&quot;:443&quot;; ma=2592000[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-0 &lt;&lt; &quot;&lt;?xml version=&#39;1.0&#39; encoding=&#39;UTF-8&#39;?&gt;&lt;Error&gt;&lt;Code&gt;NoSuchKey&lt;/Code&gt;&lt;Message&gt;The specified key does not exist.&lt;/Message&gt;&lt;Details&gt;No such object: chromedriver/LATEST_RELEASE_120&lt;/Details&gt;&lt;/Error&gt;&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-0 &lt;&lt; HTTP/1.1 404 Not Found</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-0 &lt;&lt; X-GUploader-UploadID: ABPtcPphGCIPMXps-9HbdnOxmXCwyEgKvATzoSXlwj0Eb6HVVPCKRF4Kb2h7Vx0YnbgK_tcb4uL9EbQZBw</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-0 &lt;&lt; Content-Type: application/xml; charset=UTF-8</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-0 &lt;&lt; Content-Length: 193</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-0 &lt;&lt; Date: Fri, 15 Dec 2023 11:02:23 GMT</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-0 &lt;&lt; Expires: Fri, 15 Dec 2023 11:02:23 GMT</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-0 &lt;&lt; Cache-Control: private, max-age=0</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-0 &lt;&lt; Server: UploadServer</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-0 &lt;&lt; Alt-Svc: h3=&quot;:443&quot;; ma=2592000,h3-29=&quot;:443&quot;; ma=2592000</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.MainClientExec</td>
+<td class="Message">ex-00000001: connection can be kept alive for 3 MINUTES</td>
+</tr>
+
+<tr class="error odd">
+<td class="Thread">main</td>
+<td class="Level">ERROR</td>
+<td class="Logger">io.github.bonigarcia.wdm.online.HttpClient</td>
+<td class="Message">Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_120</td>
+</tr>
+
+<tr class="warn even">
+<td class="Thread">main</td>
+<td class="Level">WARN</td>
+<td class="Logger">io.github.bonigarcia.wdm.versions.VersionDetector</td>
+<td class="Message">Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_120 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_120)</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.github.bonigarcia.wdm.versions.VersionDetector</td>
+<td class="Message">Getting driver version for chrome120 from online versions.properties</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ex-00000002: preparing request execution</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.protocol.RequestAddCookies</td>
+<td class="Message">Cookie spec selected: strict</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.protocol.RequestAuthCache</td>
+<td class="Message">Auth cache not set in the context</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.ProtocolExec</td>
+<td class="Message">ex-00000002: target auth state: UNCHALLENGED</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.ProtocolExec</td>
+<td class="Message">ex-00000002: proxy auth state: UNCHALLENGED</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.ConnectExec</td>
+<td class="Message">ex-00000002: acquiring connection with route {s}-&gt;https://raw.githubusercontent.com:443</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ex-00000002: acquiring endpoint (3 MINUTES)</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ex-00000002: endpoint lease request (3 MINUTES) [route: {s}-&gt;https://raw.githubusercontent.com:443][total available: 0; route allocated: 0 of 5; total allocated: 1 of 25]</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ex-00000002: endpoint leased [route: {s}-&gt;https://raw.githubusercontent.com:443][total available: 0; route allocated: 1 of 5; total allocated: 2 of 25]</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ex-00000002: acquired ep-00000001</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ex-00000002: acquired endpoint ep-00000001</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.ConnectExec</td>
+<td class="Message">ex-00000002: opening connection {s}-&gt;https://raw.githubusercontent.com:443</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ep-00000001: connecting endpoint (30 SECONDS)</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ep-00000001: connecting endpoint to https://raw.githubusercontent.com:443 (30 SECONDS)</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator</td>
+<td class="Message">http-outgoing-1: connecting to raw.githubusercontent.com/185.199.111.133:443</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message">Connecting socket to raw.githubusercontent.com/185.199.111.133:443 with timeout 30 SECONDS</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message">Enabled protocols: [TLSv1.3, TLSv1.2]</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message">Enabled cipher suites: [TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA]</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message">Starting handshake</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message">Secure session established</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message"> negotiated protocol: TLSv1.3</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message"> negotiated cipher suite: TLS_AES_128_GCM_SHA256</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message"> peer principal: CN=*.github.io, O=&quot;GitHub, Inc.&quot;, L=San Francisco, ST=California, C=US</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message"> peer alternative names: [*.github.io, github.io, *.github.com, github.com, www.github.com, *.githubusercontent.com, githubusercontent.com]</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message"> issuer principal: CN=DigiCert TLS RSA SHA256 2020 CA1, O=DigiCert Inc, C=US</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator</td>
+<td class="Message">http-outgoing-1: connection established 192.168.1.53:58809&lt;-&gt;185.199.111.133:443</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ep-00000001: connected http-outgoing-1</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ep-00000001: endpoint connected</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.MainClientExec</td>
+<td class="Message">ex-00000002: executing GET /bonigarcia/webdrivermanager/master/src/main/resources/versions.properties HTTP/1.1</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ep-00000001: start execution ex-00000002</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ep-00000001: executing exchange ex-00000002 over http-outgoing-1</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &gt;&gt; GET /bonigarcia/webdrivermanager/master/src/main/resources/versions.properties HTTP/1.1</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &gt;&gt; user-agent: Apache-HttpClient/5.0</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &gt;&gt; accept-encoding: gzip, deflate, br</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &gt;&gt; cache-control: max-age=0</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &gt;&gt; connection: keep-alive</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &gt;&gt; Host: raw.githubusercontent.com</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &gt;&gt; &quot;GET /bonigarcia/webdrivermanager/master/src/main/resources/versions.properties HTTP/1.1[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &gt;&gt; &quot;user-agent: Apache-HttpClient/5.0[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &gt;&gt; &quot;accept-encoding: gzip, deflate, br[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &gt;&gt; &quot;cache-control: max-age=0[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &gt;&gt; &quot;connection: keep-alive[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &gt;&gt; &quot;Host: raw.githubusercontent.com[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &gt;&gt; &quot;[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;HTTP/1.1 200 OK[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;Connection: keep-alive[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;Content-Length: 1653[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;Cache-Control: max-age=300[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;Content-Security-Policy: default-src &#39;none&#39;; style-src &#39;unsafe-inline&#39;; sandbox[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;Content-Type: text/plain; charset=utf-8[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;ETag: W/&quot;de56f96e4580ae55450ed6a794662cbdb2b39827f9709095aa3e1e7f6914629d&quot;[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;Strict-Transport-Security: max-age=31536000[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;X-Content-Type-Options: nosniff[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;X-Frame-Options: deny[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;X-XSS-Protection: 1; mode=block[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;X-GitHub-Request-Id: 80F8:2884:518BF1:55BA22:656EB31A[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;Content-Encoding: gzip[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;Accept-Ranges: bytes[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;Date: Fri, 15 Dec 2023 11:02:23 GMT[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;Via: 1.1 varnish[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;X-Served-By: cache-fra-eddf8230089-FRA[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;X-Cache: HIT[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;X-Cache-Hits: 1[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;X-Timer: S1702638144.851952,VS0,VE1[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;Vary: Authorization,Accept-Encoding,Origin[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;Access-Control-Allow-Origin: *[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;Cross-Origin-Resource-Policy: cross-origin[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;X-Fastly-Request-ID: f0fd66de4a834b5ce2a314fb325d4eabbc90a162[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;Expires: Fri, 15 Dec 2023 11:07:23 GMT[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;Source-Age: 67[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; HTTP/1.1 200 OK</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; Connection: keep-alive</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; Content-Length: 1653</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; Cache-Control: max-age=300</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; Content-Security-Policy: default-src &#39;none&#39;; style-src &#39;unsafe-inline&#39;; sandbox</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; Content-Type: text/plain; charset=utf-8</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; ETag: W/&quot;de56f96e4580ae55450ed6a794662cbdb2b39827f9709095aa3e1e7f6914629d&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; Strict-Transport-Security: max-age=31536000</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; X-Content-Type-Options: nosniff</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; X-Frame-Options: deny</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; X-XSS-Protection: 1; mode=block</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; X-GitHub-Request-Id: 80F8:2884:518BF1:55BA22:656EB31A</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; Content-Encoding: gzip</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; Accept-Ranges: bytes</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; Date: Fri, 15 Dec 2023 11:02:23 GMT</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; Via: 1.1 varnish</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; X-Served-By: cache-fra-eddf8230089-FRA</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; X-Cache: HIT</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; X-Cache-Hits: 1</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; X-Timer: S1702638144.851952,VS0,VE1</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; Vary: Authorization,Accept-Encoding,Origin</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; Access-Control-Allow-Origin: *</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; Cross-Origin-Resource-Policy: cross-origin</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; X-Fastly-Request-ID: f0fd66de4a834b5ce2a314fb325d4eabbc90a162</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; Expires: Fri, 15 Dec 2023 11:07:23 GMT</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-1 &lt;&lt; Source-Age: 67</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.MainClientExec</td>
+<td class="Message">ex-00000002: connection can be kept alive for 3 MINUTES</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;[0x1f][0xffffff8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3][0xffffff8d][0xffffff97]Mo[0xffffffe3]6[0x10][0xffffff86][0xffffffef][0xfffffff9][0x15][0x2]z[0xffffff8e][0xffffffcc][0xffffffcf]![0x19][0xffffff80][0xffffff97]~[0xffffff9e][0xffffff8a][0x1e][0xffffffda]?[0xffffffe0][0xffffffb5][0xffffff95]DX[0xffffffc7][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;lg[0xffffffb3][0xffffffe8][0xffffffaf][0xffffffef][0xc][0xffffffc9][0xffffffa1]h[0xffffffaa][0x5]z[0x8]v[0xffffffe7][0xffffffb1]D[0xffffffce][0xffffff90][0xffffffd4][0xffffffcb]w~[0x18][0xfffffffe]z[0xffffff9d][0xffffffaf][0xffffffc3][0xfffffff3]|[0xffffff9a][0xffffff86][0xffffffc3]r[0xffffffbe][0xffffffed][0xffffffe7][0xfffffff3]u[0xffffffb8][0xffffffbd]N[0xffffffc3][0xffffffd7][0xfffffff3][0xfffffff2]y[0x1e][0xffffff8e][0xffffff97][0xfffffff9][0xffffffdb]t[0x19][0xfffffff0][0xffffffef]:/[0xfffffff8][0xffffffcb]ay{[0xffffffdf][0xffffffdf][0xffffffe6]/[0xfffffff8][0xfffffff4][0xffffffe7]|{MO[0x1e][0xffffff96][0xffffffcb]e[0xffffffba][0xffffffbe]/[0xffffffe7][0xffffffe3]|~[0x19][0xffffffbe]\[0xffffff96][0xffffffcf][0xffffffeb][0xfffffffa][0xffffffca][0xffffffc3][0xffffffc3][0xf][0xffffffc3][0xffffff8f][0x19]=[\r][0xffffffbf]-[0xffffffcb][0xb][0xffffffbe][0xfffffff9][0xffffffd3][0xffffffeb]ey[0xffffff9b][0xffffff86][0xfffffffd][0xfffffff9][0xffffff98][0xffffffff];[0x7f][0xffffffbc][\r][0xffffff8f][0xffffffc3][0xffffffcf]i[0xffffffaa][0xffffffa7][0xffffffe1][0xffffff90]~[0xffffffcd][0x13][0xffffffe3][0xffffffcb][0x7f].[0x1f][0xffffff97][0xffffffc3][0xfffffff4]4[0xffffffbc][0xffffffde]n[0xffffffef]O[0xffffffbb]][0xfffffffb][0xffffffeb]x(o[0xffffff8f][0xffffffcb][0xffffffe5]ew[0xffffffc4]|O[0xffffffcb][0xfffffffe]x}[0xffffffc8][0xffffffcf]Hi&quot;[0xfffffffe][0xffffff8d]b[0xffffffb4]N[0xffffffdb]1[0xffffff88][0xffffffca]5rM[0x1c][0xffffff9c][0x1a]AW[0xffffffae][0xffffff90][0xffffffab][0xffffffc4][0xffffffa5][0x1d]M[0xffffffa8]\&quot;[0xffffff97][0xffffffc4]-[0xffffffe8][0x11]L[0xffffffe5][0x2][0xffffffb9] n[0xffffffbc][0x1c][0xffffff9d]c.B[0xffffffc4][0xffffffbf][0xffffffc4]qzW[0xffffff9f][0x17][0x1e][0xffffffb9]&#39;[0xffffffae]m[0x18][0xffffff9d][0xffffffac][0xffffffdc]!w[0xffffff89][0xb]3[0xffffff82][0xffffffaa][0x1c][0xffffff90][0x3]qe[0xffffffc2][0x8][0xffffffeb][0xfffffff3][0x16][0xffffffb9]%.[0xffffff83][0xffffffc5][0x1f]+[0xffffffc7]zE[0xffffffaa][0xffffff97][0xffffffca]p5[0x7f][0xffffff81][0xfffffff5][0xffffff8a]T[0xffffffaf][0x0]1J[0xffffffbd]&amp;[0xffffff84][0x5][0xffffff8b]T[0xffffffb0][0xffffffc0][0xfffffff1][0xffffff9a][0x9][0xffffffb0]`A[0x5][0xffffff9b]`[0xffffffe5]hV[0xffffff8e][0x5][0xb]*[0xffffffd8][0xfffffff8][0x0]#[0xfffffff0][0xffffff82][0xffffff86][0x10]CH[0xffffffd4][0x18][0xffffff9c][0xffffff9b][0xffffffa9][0xffffff8f][0xffffff81][0xffffff8a]5[0xffffffce][0xfffffffa][0x11][0xffffffa7]a[0xffffffec]b[0xffffffa0]Z[\r][0x4][0xffffffb5][0xffffffae]A[0xffffff80][0x18] Q0[0xffffffa3][0xffffffb1]Lm[0xc]6Q[0xffffffed]G[0xffffffe0]z[0xffffff82][0xffffff89][0xffffffc1]$[0xffffff8a][0xffffff8b][0xffffff83][0x1b][0xffffffc9]X[0xffffffc7]@E[0x1a][0xffffffeb][0xffffffdc][0xffffffba][0xffffffa9]A[0xffffffc5][0xffffffa0][0x12][0xffffffc5]-[0xffffffc5]Uf,cH[0x5][0x1a]&lt;[0x1]X+c[0x11]C[0xffffffaa][0xffffffcf]h1*^&#39;[0x1f][0xffffffa2]O[0xfffffff5]i[0xfffffffc]G[0xfffffff1][0xffffffc8][0xffffffde]G[0xffffff9f][0xffffffea][0xffffffd3][0xffffffca][0xffffff8c][0x1][0xffffff98][0xffffffba][0xffffffe8]Sy[0xffffffca][0xffffff8b][0xffffffd1]{[0xffffffa6][0x10]}*O[0x19][0x1c][0xffffff97][0xffffff97][0xffffffc2][0xffffffdb][0xffffffe8]Sy[0xffffffd2][0xffffffeb][0xffffffd1]sj[0xffffffde]D[0xffffff9f][0xffffffca][0xffffff93][0xffffffc6][0xffffff8d][0xffffff9a][0xffffffd7][0xffffffd8][0xffffffeb][0xffffffe8]Su[0xffffffb4][0xffffff93][0xffffff9a][0xffffff97][0xffffffc2][0xffffffcb][0xffffffe8]S[0x19][0x2]W^[0xffffffea]:[0xffffff9d][0xffffff88][0xffffff9e][0xffffffca][0xffffffd0][0x1]s[0xffffffc1]#T[0xffffffb0][0xb][0xffffffd1][0xffffff85][0xffffff84][0xffffff8d][0x1d]u[0xffffffa5]&gt;:[0xffffff9f]([0xffffff9e][0x1d]&lt;W[0xffffff8c]]tT[0xffffff88][0xfffffff6][0xffffff80][0xffffffdf][0x2][0xffffffa7][0xffffffe1] :H[0x14][0xf][0xffffffb8]Tu[0xc][0x1b][0x1d]U[0xffffffa2][0xffffff9d][0xffffffc3][0x3][0xffffffb6]&gt;m[0xffffffa2]3[0x9]+&lt;[0xffffffbf][0xc]utT[0xffffff89][0x6],[0x8]8e[0xffffffa7][0xffffffa2][0xffffffc2][0x1d][0xffffffe5]H[0xffffffde]E[0xffffff82]&quot;N[0xc][0x2]E[0xffffffbc]7[0xffffffe0])[0xffffffe2][0x15][0x5]G[0x11][0xffffffef]&amp;[0x0]E[0xffffff9c][0xc]X[0xffffff8c][0xffffffea][0x12][0xffffff81][0xffffffa1][0xffffff88][0xffffffd7][0x1c]4E&lt;[0x1f]P.[0xffffffba][0xffffffce]G[0xffffffb9][0xffffffd4]o[0x6]([0x17][0xffffffad][0xffffffef]T[0xffffffed][0xfffffff7][0xffffffe5][0xffffffef][0xfffffff9]t[0xffffffda][0xf][0xffffffbf][0xffffffce][0xffffff97][0xffffffe9]y[0xfffffff9][0xffffffde]H[0xffffffd9][0xffffffcb]t[0xfffffff8][0xffffffba][0xfffffffc][0xffffffab][0xffffff92]]Q[0xffffffca]^P@?[0xffffffbe][0xffffff8c]([0xffffffa9][0xffffffbb][0xffffffb7]&lt;[0xffffffc4][0xffffffae]yaw[0xffffff99]N[0xffffffd3][0xfffffffe]:][0x1f][0xffffff9e][0xfffffff3][0xffffffb8]R[0xffffff89][0xffffff88][0xffffffcb][0xffffff86]kW[0xffffff89][0xc][0x1b][0xffffffe2]7[0xffffffc4]m[0x8]l[0xffffff88][0xffffffdd][0x10][0xffffffb3]!zC[0xffffffd4][0xffffff86][0xffffffc8][\r]I9[0xffffffab]QU&quot;B&amp;[0xffffffeb]3[0xffffffc2]o[0xffffff88][0xffffffdb][0x10][0xffffffd8][0x10][0xffffffbb]!)g[0xffffffd9][0x12][0xffffffbd]!jC[0xffffffe4][0xffffff86][0xffffff88][0xffffff8e][0xffffff84][0xffffffd0][0x3][0xffffffdf][0x3][0xffffffd7][0x3][0xffffffe8][0xffffff81][0xffffffed]A[0xffffff9f]m[0xffffffe8][0xffffff93][\r]}[0xffffffae][0xffffffa1]O5P[0xffffffa6][0xfffffff8]m5`&lt;[0xffffffcd][0xffffffe7][0xffffff8f][0xffffffef][0x19]K[0xffffffc6]&gt;t[0xffffffcf]y[0xffffffdf][0x3][0xffffffd7][0x3][0xffffffe8][0xffffff81][0xffffffed][0xffffff81][0xffffffe9][0x1][0x15][0xffffffa0]|[0x3]T[0xf][0xffffffa8][0x0][0xffffffe5][0x1a] :[0xffffffe0]B[0xf]R[0xffffffa6][0xffffffd0][0x0][0xffffffd7][0x3][0xffffffe8][0xffffff81][0xffffffed][0xffffff81][0xffffffe9][0xffffff81][0xffffffee][0xffffff81][0xffffffea][0xffffff81][0xffffffec][0xffffff81][0xffffffe8][0x0][0xffffff84][0x1e][0xffffffa4]Lm[0x3]R[0xffffffa6][0xffffffa6][0x1][0xffffffd0][0x3][0xffffffdb][0xffffff83][0xffffff94]i[0xfffffff3][0x1][0xffffff81][0xffffffee]A[0xffffffca][0xffffffb4]9[0xfffffff6][0xffffff90]2m[0xe][0x5][0xffffff88][0xe][0xffffffd8][0xffffffd0][0x3][0xffffffdf][0x3][0xffffffd7][0xffffff83][0xffffff94][0xffffffa9]h[0xffffff80]e[0xffffffd0]*[0xffffffdf][0x1f][0xffffffef][0xffffffd3]e[0xffffffdf][0xffffffe8][0xffffffdd]B[0xfffffff1][0xffffffff][0xffffffd1][0xffffffbb][0xfffffff4][0xffffffe0]uy[0xffffffbe]}[0xffffffee]/S[0xffffff8e][0xffffffd8][0xffffffcb][0xfffffff5][0xffffffea][0xffffff97]~L[0xffffff9e]G[0xffffffd2][0xffffffe5][0x5][0x2]//[0xffffff89]ws[0xffffffe1][0xffffffe4][0xfffffff1][0xffffff92][0xffffffa7][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;x[0xfffffffb][0xfffffffb][0xffffffc0][0xffffff98],^[0xffffffb2]T[0x1][0xffffffad][0xffffff83][0xffffffd4][0xffffff8a]9Y[0xffffffbc]d[0xffffffa9]&lt;[0xe][0x13][0x1c]crx[0xffffffc9]Q9[0xfffffffc][0xffffff82]$[0xffffffda][0xffffff92][0xffffffc2]E[0xffffffeb] Q[0xffffffcc]2G=h[0xc][0xffffffa4]Te[0x18]T[0xffffff85][0xffffffc6]?z[0xffffffa6][0xffffffee][0xffffffce]=[0xffffffda]B[0xffffffa1][0xfffffff5][0xffffff8e]8Q[0xffffffc1][0xffffffb6][0xffffffb5][0xffffff8e][0xffffffa8][0xfffffff8][0x5][0xffffff9b][0xffffffd6]9[0xffffff86]Re[0xffffffd0][0xffffffad]oD[0xffffffb3][0xffffff91][0xffffffa9]j]#.Z[0xffffffc1][0xffffffb2]5[0xffffff8d][0xffffffe4][0xffffffc7]2[0x16][0xffffffad]g[0xfffffff4][0xffffffa5]p[0x1f]Z[0xffffffc7][0x8]P[0xffffffa8][0xffffffef][0xffffffec]b[0xffffffa6][0xffffffae]5[0xffffff8b]P6[0xffffffc6]Ck[0x15][0xffffffeb][0x12][0xffffffa1][0xffffff88][0xffffffdc]Y[0xffffffc5][0xc]M[0xffffffe3][0x14]}I[0xc][0xffffffc5][0xffffffe4][0xffffffce]&#39;f[0xffffffa8][0xffffffee]mb[0xffffff86][0xffffffb2]q[0xffffff89][0xffffff96][0xffffffe7][0x17][0xffffff8d]I[0xffffffe4]TQ\[0xffffffee],b[0xffffff86][0xffffffbe]s[0xffffff88][0xffffff99][0xffffffba][0xffffffc6] :[0xffffff86][0xffffffd0][0xffffffd8]C_[0xffffffa6]G[0xffffffb5]Y[0xffffffdd]!g[0xffffff8f][0xffffff8a][0xffffffb3][0xffffff9a]C\[0xffffffe0]Buc[0xe][0xffffff81][0x7]U[0xffffff8d]7[0xfffffff4]e[0xffffffc3]Q~VkX7[0xb]5h[0xffffffb5][0xffffff86]|[0xffffffd6]Q[0xffffff87]Vg[0xffffffc8]&#39;[0x1a][0xffffffb5][0xffffffa8]1[0xffffff86][0xffffffb2][0xffffff94][0xffffff8a][0xffffff82][0xffffffd4][0xfffffffa][0xffffffc2]2[0x17][0xffffffaa][0xffffffd2]j[0xb][0x1d][0xffffff8f]j[0x1b]W[0xffffffc8]G[0x19][0xffffffd5]i[0xfffffff5][0xffffff84][0xfffffff5]p[0xffffffa2]D5[0xffffff9e][0xffffff90]?5[0xffffffd4][0xffffffa9][0xffffffc6][0x12][0xffffffd6][0xffffffb9][0xffffff8a][0xffffff95]K[0xffffff81][\r]mP[0xffffff8c]\[0xe][0xffffff8a][0xffffff8f][0xffffffcb]A[0xffffffb1]q9(..[0x7][0xffffffc5][0xffffffc4][0xffffffe5][0xffffffa0]x[0xffffffb8][0x1c][0x14][0xb][0xffffff97][0x3][0xffffff99]=[[0xe]D[0x13][0x18][0xffffffca][0xffffff80]36[0xffffff94][0xffffff81].[0xfffffff3][0x18][0xffffffca]@[0xffffff95][0xffffffc5]0[0xffffff90][0xffffff83];[0xffffffd3]7[0x1f].[0xb])[0xffffffd8][0xfffffff0][0xffffffcb][0xfffffff1]ej4[0xfffffff0][0xffffffed]:![0xfffffff8]O[0x11]&lt;N[0xffffffdf][0xffffffa6][0x13][0xffffff8d]:[0xffffffbe][0xfffffff1][0x8]I[0x11][0xffffffa7][0xfffffff3][0xffffffe3][0xffffffc7]uW[0xffffffd9]#[\r][0xffffffb2][0xffffffbb]-[0xffffffcb][0xffffffe9][0xffffffba][0xfffffffb][0xffffff9c][0xffffffbe][0x14]Q| [0xffffffba][0xfffffff6][0xffffffb5][0xffffffd2][0xffffffe3][0xffffffcd] }[0xffffffa1][0xffffffdc][0xffffffd5]J[0xffffff87][0xffffffa6][0x1b]W2S[0xffffffee]i[0xffffffa5]S[0xffffffe9] g[0xffffffca][0x1d][0xffffffad][0x4][0xffffff90][0xffffffd4]qf[0xffffffca][0xfffffffd][0xffffffac][0xffffffb4]x&gt;p[0xfffffff5][0x12][0xffffffad][0xffffffdd][0xffffffac][0xffffffb4]([0xffffffb4][0xffffffae][0xffffffcc]V{Yi[0x0][0xffffffc7][0xffffff85]B[0xffffffb9][0xffffff93][0xffffffc5][0x1e][0xffffff80][0xffffffee][0xfffffff0][0xc][0xffffffb9][0xffffff8d][0xffffff95][0xffffffda][0xffffffd1][0xffffff8d]Y(7[0xffffffb1][0xffffffd8]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;[0xffffff8f]jT[0xffffffb0]B[0xffffffb9][0xffffff85][0xffffff95][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;[0xffffffbf]T[0xffffffc7]#p[0x3][0xffffff8b][0x1d][0xffffff87][0xffffffa9]E[0xffffffd4][0xffffffee][0x15]o[0x3]K[0x1d]A[0xffffffa6][0xffffffdc][0xffffffbb]J%[0xffffffc5]:.w[0xffffffae]xYX[0xffffffea][0xffffff9f][0xffffff88]r[0xffffffdf][0xffffff8a][0xffffffd2]OB[0xffffff91]Y[0xffffffe9]Z%UW[0x16][0xffffff86][V,MUV[0x1a]V[0xffffffac][0xffffffc1]TV[0xffffffda]U[0xffffffcc][0xffffffaa][0xffffffce][0xffffffcc][0xffffffcd]j@[0xffffff8d][0xffffffd1]2[0xffffffa3][0xffffffd2][0xffffffa8][0x6]\z][0xffffff9e]*]j[0x10][0xffffffeb][0x4][0xffffffa5]C[0xfffffff5][0xffffffa4]t[0xffffffe5][0xffffffc5][0xffffffd2][0xffffff9d]z,,[0x13][0xffffffee]Li[0xffffffc7][0xfffffff3][0xffffffc6]pW[0xffffffea]pm[0xffffffcb]k[0xffffffdc][0xffffff92][0x2][0xffffff84][0xffffffb2]%[0xffffffdc][0xffffff8e][0x2][0x1e][0x9][0xffffffc8]k[0xffffffc1][0xffffffbd][0xffffffa8][0xffffffa5][0x5].O[0xffffff95]F[0xffffffd4]&amp;[0xffffff83][0xffffff92][0x8]7[0xffffffa1]([\r][0xffffffb6][0xffffffcc][0xffffff87][0xffffffea][0xffffff95][0xffffffd5]3pN[0xffffffdc][0xffffff93][0xffffffe2]=[[0xffffffb6][0xffffffaa][0xfffffff6][0xffffffa3]X1[0xffffff9e][0xffffffbb][0xffffffc4]j3Jg6[0xffffff93][0xffffffd2][0xffffff88]*[0xffffffc7]G[0xffffff87]{P[0xffffffa5]+)[0xfffffffd]&#39;[0xffffffc9]b![0xffffffa5][0xfffffff5][0xffffff94][0x1a]{[0xfffffff3][0xffffff8c][0xffffff8c][0xffffff89][0xffffffef][0xffffff97][0xffffffe9]q&gt;_o[0xfffffffb][0xffffffd3]i:f[0xffffffa8]&quot;[0xffffffd0][0xffffffcd][0xffffffae][0xfffffff3]912[0xffffffa2][0xffffff84][0xffffff81][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-1 &lt;&lt; &quot;[0xffffffb9]|#&quot;[0xffffffea]$[0xffffffde]vy?[0xffffffb4][0xffffff8f][0xfffffff8]a[0x19][0x1d]r[0xffffffa8]Htp[0xffffffa7]}&gt;#[0xffffffd8][0xffffff87][0xffffffd1][0xffffff95][0xffffff8d]z[0xfffffffd][0xfffffff0][0xf][0xffffffe2][0x12][0xffffff8f][0xfffffff4]&gt;[0x13][0x0][0x0]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ep-00000001: releasing valid endpoint</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ep-00000001: releasing endpoint</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ep-00000001: connection http-outgoing-1 can be kept alive for 3 MINUTES</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ep-00000001: connection released [route: {s}-&gt;https://raw.githubusercontent.com:443][total available: 1; route allocated: 1 of 5; total allocated: 2 of 25]</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.github.bonigarcia.wdm.versions.VersionDetector</td>
+<td class="Message">Driver for chrome120 not found in online properties (using local versions.properties)</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.github.bonigarcia.wdm.WebDriverManager</td>
+<td class="Message">The driver version for CHROME 120 is unknown ... trying with latest</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ex-00000003: preparing request execution</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.protocol.RequestAddCookies</td>
+<td class="Message">Cookie spec selected: strict</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.protocol.RequestAuthCache</td>
+<td class="Message">Auth cache not set in the context</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.ProtocolExec</td>
+<td class="Message">ex-00000003: target auth state: UNCHALLENGED</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.ProtocolExec</td>
+<td class="Message">ex-00000003: proxy auth state: UNCHALLENGED</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.ConnectExec</td>
+<td class="Message">ex-00000003: acquiring connection with route {s}-&gt;https://chromedriver.storage.googleapis.com:443</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ex-00000003: acquiring endpoint (3 MINUTES)</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ex-00000003: endpoint lease request (3 MINUTES) [route: {s}-&gt;https://chromedriver.storage.googleapis.com:443][total available: 1; route allocated: 1 of 5; total allocated: 2 of 25]</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ex-00000003: endpoint leased [route: {s}-&gt;https://chromedriver.storage.googleapis.com:443][total available: 1; route allocated: 2 of 5; total allocated: 3 of 25]</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ex-00000003: acquired ep-00000002</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ex-00000003: acquired endpoint ep-00000002</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.ConnectExec</td>
+<td class="Message">ex-00000003: opening connection {s}-&gt;https://chromedriver.storage.googleapis.com:443</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ep-00000002: connecting endpoint (30 SECONDS)</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ep-00000002: connecting endpoint to https://chromedriver.storage.googleapis.com:443 (30 SECONDS)</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator</td>
+<td class="Message">http-outgoing-2: connecting to chromedriver.storage.googleapis.com/216.58.215.91:443</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message">Connecting socket to chromedriver.storage.googleapis.com/216.58.215.91:443 with timeout 30 SECONDS</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message">Enabled protocols: [TLSv1.3, TLSv1.2]</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message">Enabled cipher suites: [TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA]</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message">Starting handshake</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message">Secure session established</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message"> negotiated protocol: TLSv1.2</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message"> negotiated cipher suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message"> peer principal: CN=*.storage.googleapis.com</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message"> peer alternative names: [*.storage.googleapis.com, *.googleapis.com, commondatastorage.googleapis.com, *.commondatastorage.googleapis.com, storage.googleapis.com, storage-p2.googleapis.com, *.storage-p2.googleapis.com, storage.mtls.googleapis.com, *.appspot.com.storage.googleapis.com, *.content-storage.googleapis.com, *.content-storage-p2.googleapis.com, *.content-storage-upload.googleapis.com, *.content-storage-download.googleapis.com, *.storage-upload.googleapis.com, *.storage-download.googleapis.com]</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory</td>
+<td class="Message"> issuer principal: CN=GTS CA 1C3, O=Google Trust Services LLC, C=US</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator</td>
+<td class="Message">http-outgoing-2: connection established 192.168.1.53:58810&lt;-&gt;216.58.215.91:443</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ep-00000002: connected http-outgoing-2</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ep-00000002: endpoint connected</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.MainClientExec</td>
+<td class="Message">ex-00000003: executing GET /LATEST_RELEASE HTTP/1.1</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ep-00000002: start execution ex-00000003</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ep-00000002: executing exchange ex-00000003 over http-outgoing-2</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &gt;&gt; GET /LATEST_RELEASE HTTP/1.1</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &gt;&gt; user-agent: Apache-HttpClient/5.0</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &gt;&gt; accept-encoding: gzip, deflate, br</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &gt;&gt; cache-control: max-age=0</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &gt;&gt; connection: keep-alive</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &gt;&gt; Host: chromedriver.storage.googleapis.com</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &gt;&gt; &quot;GET /LATEST_RELEASE HTTP/1.1[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &gt;&gt; &quot;user-agent: Apache-HttpClient/5.0[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &gt;&gt; &quot;accept-encoding: gzip, deflate, br[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &gt;&gt; &quot;cache-control: max-age=0[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &gt;&gt; &quot;connection: keep-alive[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &gt;&gt; &quot;Host: chromedriver.storage.googleapis.com[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &gt;&gt; &quot;[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;HTTP/1.1 200 OK[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;X-GUploader-UploadID: ABPtcPrQDRSHsxixo-qSbJh458GGc4xArVkkcAeEgsg4WtGnXRfKzZIdnVeeAyH0FRABmH7nVCV2yofMgg[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;x-goog-generation: 1685523462105569[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;x-goog-metageneration: 1[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;x-goog-stored-content-encoding: identity[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;x-goog-stored-content-length: 13[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;x-goog-hash: crc32c=tVW4TA==[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;x-goog-hash: md5=NoaEuIlBlniwTkiZ1T16sA==[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;x-goog-storage-class: STANDARD[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;Accept-Ranges: bytes[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;Content-Length: 13[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;Server: UploadServer[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;Date: Fri, 15 Dec 2023 10:36:14 GMT[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;Expires: Fri, 15 Dec 2023 11:36:14 GMT[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;Cache-Control: public, max-age=3600[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;Age: 1569[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;Last-Modified: Wed, 31 May 2023 08:57:42 GMT[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;ETag: &quot;368684b889419678b04e4899d53d7ab0&quot;[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;Content-Type: text/plain[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;Alt-Svc: h3=&quot;:443&quot;; ma=2592000,h3-29=&quot;:443&quot;; ma=2592000[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;[\r][\n]&quot;</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.wire</td>
+<td class="Message">http-outgoing-2 &lt;&lt; &quot;114.0.5735.90&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; HTTP/1.1 200 OK</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; X-GUploader-UploadID: ABPtcPrQDRSHsxixo-qSbJh458GGc4xArVkkcAeEgsg4WtGnXRfKzZIdnVeeAyH0FRABmH7nVCV2yofMgg</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; x-goog-generation: 1685523462105569</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; x-goog-metageneration: 1</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; x-goog-stored-content-encoding: identity</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; x-goog-stored-content-length: 13</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; x-goog-hash: crc32c=tVW4TA==</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; x-goog-hash: md5=NoaEuIlBlniwTkiZ1T16sA==</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; x-goog-storage-class: STANDARD</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; Accept-Ranges: bytes</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; Content-Length: 13</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; Server: UploadServer</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; Date: Fri, 15 Dec 2023 10:36:14 GMT</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; Expires: Fri, 15 Dec 2023 11:36:14 GMT</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; Cache-Control: public, max-age=3600</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; Age: 1569</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; Last-Modified: Wed, 31 May 2023 08:57:42 GMT</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; ETag: &quot;368684b889419678b04e4899d53d7ab0&quot;</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; Content-Type: text/plain</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.headers</td>
+<td class="Message">http-outgoing-2 &lt;&lt; Alt-Svc: h3=&quot;:443&quot;; ma=2592000,h3-29=&quot;:443&quot;; ma=2592000</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.MainClientExec</td>
+<td class="Message">ex-00000003: connection can be kept alive for 3 MINUTES</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.classic.InternalHttpClient</td>
+<td class="Message">ep-00000002: releasing valid endpoint</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ep-00000002: releasing endpoint</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ep-00000002: connection http-outgoing-2 can be kept alive for 3 MINUTES</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager</td>
+<td class="Message">ep-00000002: connection released [route: {s}-&gt;https://chromedriver.storage.googleapis.com:443][total available: 2; route allocated: 2 of 5; total allocated: 3 of 25]</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.github.bonigarcia.wdm.versions.VersionDetector</td>
+<td class="Message">Latest version of chromedriver according to https://chromedriver.storage.googleapis.com/LATEST_RELEASE is 114.0.5735.90</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.github.bonigarcia.wdm.WebDriverManager</td>
+<td class="Message">Driver chromedriver 114.0.5735.90 found in cache</td>
+</tr>
+
+<tr class="info odd">
+<td class="Thread">main</td>
+<td class="Level">INFO</td>
+<td class="Logger">io.github.bonigarcia.wdm.WebDriverManager</td>
+<td class="Message">Exporting webdriver.chrome.driver as C:\Users\akaczmarek2\.cache\selenium\chromedriver\win32\114.0.5735.90\chromedriver.exe</td>
+</tr>

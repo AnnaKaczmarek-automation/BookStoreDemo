@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Logback Log Messages</title>
+<style  type="text/css">
+table { margin-left: 2em; margin-right: 2em; border-left: 2px solid #AAA; }
+TR.even { background: #FFFFFF; }
+TR.odd { background: #EAEAEA; }
+TR.warn TD.Level, TR.error TD.Level, TR.fatal TD.Level {font-weight: bold; color: #FF4040 }
+TD { padding-right: 1ex; padding-left: 1ex; border-right: 2px solid #AAA; }
+TD.Time, TD.Date { text-align: right; font-family: courier, monospace; font-size: smaller; }
+TD.Thread { text-align: left; }
+TD.Level { text-align: right; }
+TD.Logger { text-align: left; }
+TR.header { background: #596ED5; color: #FFF; font-weight: bold; font-size: larger; }
+TD.Exception { background: #A2AEE8; font-family: courier, monospace;}
+</style>
+
+  </head>
+<body>
+<hr/>
+<p>Log session start time Mon Dec 18 10:36:26 CET 2023</p><p></p>
+
+<table cellspacing="0">
+<tr class="header">
+<td class="Thread">Thread</td>
+<td class="Level">Level</td>
+<td class="Logger">Logger</td>
+<td class="Message">Message</td>
+</tr>
+
+
+<tr class="info even">
+<td class="Thread">main</td>
+<td class="Level">INFO</td>
+<td class="Logger">ApplicationProperties.class</td>
+<td class="Message">Amount of loaded environment properties is: 3</td>
+</tr>
+
+<tr class="info odd">
+<td class="Thread">main</td>
+<td class="Level">INFO</td>
+<td class="Logger">ApplicationProperties.class</td>
+<td class="Message">Amount of loaded browser properties is: 3</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.github.bonigarcia.wdm.WebDriverManager</td>
+<td class="Message">Using WebDriverManager 5.5.3</td>
+</tr>
+
+<tr class="debug odd">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.github.bonigarcia.wdm.cache.ResolutionCache</td>
+<td class="Message">Resolution chrome=120 in cache (valid until 11:14:19 18/12/2023 CET)</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.github.bonigarcia.wdm.cache.ResolutionCache</td>
+<td class="Message">Resolution chrome120=120.0.6099.71 in cache (valid until 07:52:41 19/12/2023 CET)</td>
+</tr>
+
+<tr class="info odd">
+<td class="Thread">main</td>
+<td class="Level">INFO</td>
+<td class="Logger">io.github.bonigarcia.wdm.WebDriverManager</td>
+<td class="Message">Using chromedriver 120.0.6099.71 (resolved driver for Chrome 120)</td>
+</tr>
+
+<tr class="debug even">
+<td class="Thread">main</td>
+<td class="Level">DEBUG</td>
+<td class="Logger">io.github.bonigarcia.wdm.WebDriverManager</td>
+<td class="Message">Driver chromedriver 120.0.6099.71 found in cache</td>
+</tr>
+
+<tr class="info odd">
+<td class="Thread">main</td>
+<td class="Level">INFO</td>
+<td class="Logger">io.github.bonigarcia.wdm.WebDriverManager</td>
+<td class="Message">Exporting webdriver.chrome.driver as C:\Users\akaczmarek2\.cache\selenium\chromedriver\win64\120.0.6099.71\chromedriver.exe</td>
+</tr>
+
+<tr class="info even">
+<td class="Thread">main</td>
+<td class="Level">INFO</td>
+<td class="Logger">BasePage.class</td>
+<td class="Message">aria hidden attribute was set to &#39;false&#39;</td>
+</tr>
+
+<tr class="info odd">
+<td class="Thread">main</td>
+<td class="Level">INFO</td>
+<td class="Logger">BasePage.class</td>
+<td class="Message">aria hidden attribute was set to &#39;false&#39;</td>
+</tr>
+
+<tr class="info even">
+<td class="Thread">main</td>
+<td class="Level">INFO</td>
+<td class="Logger">BasePage.class</td>
+<td class="Message">aria hidden attribute was set to &#39;false&#39;</td>
+</tr>
+
+<tr class="info odd">
+<td class="Thread">main</td>
+<td class="Level">INFO</td>
+<td class="Logger">RegisterPage.class</td>
+<td class="Message">Captcha is visible</td>
+</tr>
+
+<tr class="info even">
+<td class="Thread">main</td>
+<td class="Level">INFO</td>
+<td class="Logger">RegisterPage.class</td>
+<td class="Message">Captcha is clickable</td>
+</tr>
+
+<tr class="info odd">
+<td class="Thread">main</td>
+<td class="Level">INFO</td>
+<td class="Logger">TestBase.class</td>
+<td class="Message">***** Driver closed *****</td>
+</tr>

@@ -3,26 +3,23 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pages.HomePage;
 import pages.LoginPage;
-import pages.RegisterPage;
+import pages.RegisterFormPage;
 
 public class RegistrationTest extends TestBase {
     protected HomePage homePage;
     protected LoginPage loginPage;
-    protected RegisterPage registerPage;
+    protected RegisterFormPage registerPage;
     Logger log = LoggerFactory.getLogger("RegistrationTest.class");
 
     @Test
-    public void fillingRegistrationForm() {
+    public void fillingRegistrationFormTest() throws InterruptedException {
         homePage = new HomePage(driver);
         loginPage = new LoginPage(driver);
-        registerPage = new RegisterPage(driver);
+        registerPage = new RegisterFormPage(driver);
 
-        homePage.clickOnLoginButton();
-        loginPage.clickOnNewUserButton();
-        registerPage.fillInTheRegisterForm()
-                .selectCaptcha()
-                .clickOnRegisterButton();
-
-
+        homePage.clickOnSignIn();
+        loginPage.chooseRegisterNowOption();
+        registerPage.fillInTheRegisterForm("english", true, false)
+                .saveAccountInformation();
     }
 }

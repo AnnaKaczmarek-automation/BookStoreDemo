@@ -1,0 +1,10 @@
+[main] I ApplicationProperties.class - ( Amount of loaded environment properties is: 3
+[main] I ApplicationProperties.class - ( Amount of loaded browser properties is: 3
+[main] D i.g.b.wdm.cache.ResolutionCache - ( Resolution chrome=120 in cache (valid until 09:41:56 15/12/2023 CET)
+[main] D i.g.b.wdm.cache.ResolutionCache - ( Resolution chrome120=120.0.6099.71 in cache (valid until 12:02:20 15/12/2023 CET)
+[main] I i.g.bonigarcia.wdm.WebDriverManager - ( Using chromedriver 120.0.6099.71 (resolved driver for Chrome 120)
+[main] D i.g.bonigarcia.wdm.WebDriverManager - ( Driver chromedriver 120.0.6099.71 found in cache
+[main] I i.g.bonigarcia.wdm.WebDriverManager - ( Exporting webdriver.chrome.driver as C:\Users\akaczmarek2\.cache\selenium\chromedriver\win64\120.0.6099.71\chromedriver.exe
+[main] I BasePage.class - ( Captcha is visible
+[main] I BasePage.class - ( Captcha is clickable
+[main] I BasePage.class - ( amount of tabs is: 2

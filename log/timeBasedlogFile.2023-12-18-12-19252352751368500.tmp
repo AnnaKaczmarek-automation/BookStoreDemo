@@ -1,0 +1,15 @@
+[main] I ApplicationProperties.class - ( Amount of loaded environment properties is: 5
+[main] I ApplicationProperties.class - ( Amount of loaded browser properties is: 3
+[main] D i.g.bonigarcia.wdm.WebDriverManager - ( Using WebDriverManager 5.5.3
+[main] D i.g.b.wdm.cache.ResolutionCache - ( Resolution chrome=120 in cache (valid until 13:18:32 18/12/2023 CET)
+[main] D i.g.b.wdm.cache.ResolutionCache - ( Resolution chrome120=120.0.6099.71 in cache (valid until 07:52:41 19/12/2023 CET)
+[main] I i.g.bonigarcia.wdm.WebDriverManager - ( Using chromedriver 120.0.6099.71 (resolved driver for Chrome 120)
+[main] D i.g.bonigarcia.wdm.WebDriverManager - ( Driver chromedriver 120.0.6099.71 found in cache
+[main] I i.g.bonigarcia.wdm.WebDriverManager - ( Exporting webdriver.chrome.driver as C:\Users\akaczmarek2\.cache\selenium\chromedriver\win64\120.0.6099.71\chromedriver.exe
+[main] I BasePage.class - ( Adverts are displayed
+[main] I BasePage.class - ( aria hidden attribute was set to 'false'
+[main] I BasePage.class - ( aria hidden attribute was set to 'false'
+[main] I BasePage.class - ( aria hidden attribute was set to 'false'
+[main] I BasePage.class - ( User name was typed in
+[main] I BasePage.class - ( Password was typed in
+[main] I BasePage.class - ( Login button was clicked

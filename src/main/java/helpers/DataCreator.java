@@ -61,8 +61,8 @@ public class DataCreator {
         return faker.address().country();
     }
 
-    public Integer createRandomNumber(int maxNumber) {
-        return faker.number().numberBetween(0, maxNumber);
+    public Integer createRandomNumber(int minNumber, int maxNumber) {
+        return faker.number().numberBetween(minNumber, maxNumber);
     }
 
 

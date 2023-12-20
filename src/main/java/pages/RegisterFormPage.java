@@ -163,7 +163,7 @@ public class RegisterFormPage extends BasePage {
 
     public void selectFavouriteCategory(){
         Select selectCategory = new Select(favouriteCategoryField);
-        int index = dataCreator.createRandomNumber(favouriteCategoryOptionList.size() - 1);
+        int index = dataCreator.createRandomNumber(0,  favouriteCategoryOptionList.size() - 1);
         selectCategory.selectByValue(favouriteCategoryOptionList.get(index).getAttribute("value"));
         log.info("Favourite category was chosen");
     }

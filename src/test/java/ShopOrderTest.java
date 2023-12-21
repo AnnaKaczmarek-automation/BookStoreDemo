@@ -14,6 +14,8 @@ public class ShopOrderTest extends TestBase {
     protected DogsCategoryPage dogsCategoryPage;
     protected ShoppingCartPage shoppingCartPage;
     protected CatsCategoryPage catsCategoryPage;
+    protected ReptilesCategoryPage reptilesCategoryPage;
+    protected BirdsCategoryPage birdsCategoryPage;
 
 
     @Test
@@ -23,15 +25,17 @@ public class ShopOrderTest extends TestBase {
         dogsCategoryPage = new DogsCategoryPage(driver);
         shoppingCartPage = new ShoppingCartPage(driver);
         catsCategoryPage = new CatsCategoryPage(driver);
+        reptilesCategoryPage = new ReptilesCategoryPage(driver);
+        birdsCategoryPage = new BirdsCategoryPage(driver);
 
         Logger log = LoggerFactory.getLogger("ShopOrderTest.class");
 
         List<Product> shoppingList = new ArrayList<>();
         homePage.openCategory("fish");
         fishCategoryPage.chooseRandomFish();
-        double initialFishTotalCost = shoppingCartPage.takeProductsTotalCost(shoppingList);
+        float initialFishTotalCost = shoppingCartPage.takeProductsTotalCost(shoppingList);
         shoppingCartPage.setRandomProductQuantity(shoppingList);
-        double updatedFishTotalCost = shoppingCartPage.takeProductsTotalCost(shoppingList);
+        float updatedFishTotalCost = shoppingCartPage.takeProductsTotalCost(shoppingList);
         Assertions.assertThat(updatedFishTotalCost).isGreaterThan(initialFishTotalCost);
         Product fish = shoppingCartPage.createNewProduct(shoppingList);
         shoppingList.add(fish);
@@ -41,9 +45,9 @@ public class ShopOrderTest extends TestBase {
 
         homePage.openCategory("dogs");
         dogsCategoryPage.chooseRandomDog();
-        double initialDogTotalCost = shoppingCartPage.takeProductsTotalCost(shoppingList);
+        float initialDogTotalCost = shoppingCartPage.takeProductsTotalCost(shoppingList);
         shoppingCartPage.setRandomProductQuantity(shoppingList);
-        double updatedDogTotalCost = shoppingCartPage.takeProductsTotalCost(shoppingList);
+        float updatedDogTotalCost = shoppingCartPage.takeProductsTotalCost(shoppingList);
         Assertions.assertThat(updatedDogTotalCost).isGreaterThan(initialDogTotalCost);
         Product dog = shoppingCartPage.createNewProduct(shoppingList);
         shoppingList.add(dog);
@@ -52,13 +56,38 @@ public class ShopOrderTest extends TestBase {
 
         homePage.openCategory("cats");
         catsCategoryPage.chooseRandomCat();
-        double initialCatTotalCost = shoppingCartPage.takeProductsTotalCost(shoppingList);
+        float initialCatTotalCost = shoppingCartPage.takeProductsTotalCost(shoppingList);
         shoppingCartPage.setRandomProductQuantity(shoppingList);
-        double updatedCatTotalCost = shoppingCartPage.takeProductsTotalCost(shoppingList);
+        float updatedCatTotalCost = shoppingCartPage.takeProductsTotalCost(shoppingList);
         Assertions.assertThat(updatedCatTotalCost).isGreaterThan(initialCatTotalCost);
         Product cat = shoppingCartPage.createNewProduct(shoppingList);
         shoppingList.add(cat);
         log.info("cat was added to the shopping list");
         shoppingCartPage.returnToMainMenu();
+
+        homePage.openCategory("reptiles");
+        reptilesCategoryPage.chooseRandomReptile();
+        float initialReptileTotalCost = shoppingCartPage.takeProductsTotalCost(shoppingList);
+        shoppingCartPage.setRandomProductQuantity(shoppingList);
+        float updatedReptileTotalCost = shoppingCartPage.takeProductsTotalCost(shoppingList);
+        Assertions.assertThat(updatedReptileTotalCost).isGreaterThan(initialReptileTotalCost);
+        Product reptile = shoppingCartPage.createNewProduct(shoppingList);
+        shoppingList.add(reptile);
+        log.info("cat was added to the shopping list");
+        shoppingCartPage.returnToMainMenu();
+
+        homePage.openCategory("birds");
+        birdsCategoryPage.chooseRandomBird();
+        float initialBirdTotalCost = shoppingCartPage.takeProductsTotalCost(shoppingList);
+        shoppingCartPage.setRandomProductQuantity(shoppingList);
+        float updatedBirdTotalCost = shoppingCartPage.takeProductsTotalCost(shoppingList);
+        Assertions.assertThat(updatedBirdTotalCost).isGreaterThan(initialBirdTotalCost);
+        Product bird = shoppingCartPage.createNewProduct(shoppingList);
+        shoppingList.add(bird);
+        log.info("cat was added to the shopping list");
+
+        float expectedSubTotalValue = shoppingCartPage.countSubTotalValue(updatedFishTotalCost, updatedDogTotalCost, updatedCatTotalCost,updatedReptileTotalCost, updatedBirdTotalCost);
+        float actualSubTotalValue = shoppingCartPage.takeSubTotalValue(shoppingList);
+        Assertions.assertThat(actualSubTotalValue).isEqualTo(expectedSubTotalValue);
     }
 }

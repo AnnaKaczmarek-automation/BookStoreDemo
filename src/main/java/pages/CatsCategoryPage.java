@@ -29,7 +29,7 @@ public class CatsCategoryPage extends BasePage {
     }
 
     private void chooseRandomMainCategoryCat() {
-        int index = dataCreator.createRandomNumber(2, mainProductList.size() - 1);
+        int index = dataCreator.createRandomNumber(1, mainProductList.size() - 1);
         waitUntilElementIsClickable(mainProductList.get(index));
         clickOnElement(mainProductList.get(index));
         wait.until(ExpectedConditions.urlContains("viewProduct=&productId="));

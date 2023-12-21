@@ -51,8 +51,7 @@ public class ShoppingCartPage extends BasePage {
         int quantity = dataCreator.createRandomNumber(2, 10);
         WebElement quantityValue = driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td[5]/input"));
         waitForVisibility(quantityValue);
-//        String oldValue = totalCost.getText();
-        String oldValue1 = driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td[7]")).getText();
+//        String oldValue1 = driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td[7]")).getText();
         sendTextToField(quantityValue, String.valueOf(quantity));
         actions.sendKeys(Keys.ENTER).build().perform();
         waitUntilElementIsClickable(updateCartButton);
@@ -61,8 +60,8 @@ public class ShoppingCartPage extends BasePage {
         log.info("Product amount was updated into --> " + quantityInput.getAttribute("value"));
     }
 
-    public Double takeProductsTotalCost(List<Product> shoppingList) throws InterruptedException {
-        double cost = Double.parseDouble(driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td[7]")).getText().substring(1));
+    public Float takeProductsTotalCost(List<Product> shoppingList) throws InterruptedException {
+        float cost = Float.parseFloat(driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td[7]")).getText().substring(1));
         log.info("Total Cost of particular product is --> " + cost);
         return cost;
     }
@@ -84,5 +83,13 @@ public class ShoppingCartPage extends BasePage {
         String listPrice = driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td[6]")).getText();
         String totalCoast = driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td[7]")).getText();
         return new Product(itemID, productID, description, inStock, quantity, listPrice, totalCoast);
+    }
+
+    public float countSubTotalValue(float updatedFishTotalCost, float updatedDogTotalCost, float updatedCatTotalCost, float updatedReptileTotalCost, float updatedBirdTotalCost) {
+        return updatedFishTotalCost + updatedDogTotalCost + updatedCatTotalCost + updatedReptileTotalCost + updatedBirdTotalCost;
+    }
+
+    public Float takeSubTotalValue(List<Product> shoppingList){
+        return Float.parseFloat(driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td[1]")).getText().substring(12));
     }
 }

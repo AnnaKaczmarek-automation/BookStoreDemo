@@ -17,6 +17,7 @@ public class ShoppingCartPage extends BasePage {
     }
 
     DataCreator dataCreator = new DataCreator();
+    LoginPage loginPage = new LoginPage(driver);
     @FindBy(xpath = "//a[text()='Add to Cart']")
     private WebElement addToCartButton;
     @FindBy(xpath = "//input[contains(@name,'EST')]")
@@ -43,13 +44,15 @@ public class ShoppingCartPage extends BasePage {
     private WebElement listPriceField;
     @FindBy(xpath = "//tr/td[7]")
     private WebElement totalCostField;
+    @FindBy(xpath = "//a[text()='Proceed to Checkout']")
+    private WebElement proceedToCheckoutButton;
 
 
     public void setRandomProductQuantity(List<Product> shoppingList) throws InterruptedException {
         log.info("Shopping list has size: " + shoppingList.size());
         waitForVisibility(shoppingCartSection);
         int quantity = dataCreator.createRandomNumber(2, 10);
-        WebElement quantityValue = driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td[5]/input"));
+        WebElement quantityValue = driver.findElement(By.xpath("//tr[" + (shoppingList.size() + 2) + "]/td[5]/input"));
         waitForVisibility(quantityValue);
 //        String oldValue1 = driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td[7]")).getText();
         sendTextToField(quantityValue, String.valueOf(quantity));
@@ -61,10 +64,12 @@ public class ShoppingCartPage extends BasePage {
     }
 
     public Float takeProductsTotalCost(List<Product> shoppingList) throws InterruptedException {
-        float cost = Float.parseFloat(driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td[7]")).getText().substring(1));
+        String cost = driver.findElement(By.xpath("//tr[" + (shoppingList.size() + 2) + "]/td[7]")).getText().substring(1);
+        float value = Float.parseFloat(cost);
         log.info("Total Cost of particular product is --> " + cost);
-        return cost;
+        return value;
     }
+
 
     public void returnToMainMenu() {
         waitUntilElementIsClickable(returnToMainMenuButton);
@@ -74,14 +79,14 @@ public class ShoppingCartPage extends BasePage {
 
     public Product createNewProduct(List<Product> shoppingList) {
         log.info("shopping list size is: " + shoppingList.size());
-        String itemID = driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td/a[contains(@href,'viewItem')]")).getText();
+        String itemID = driver.findElement(By.xpath("//tr[" + (shoppingList.size() + 2) + "]/td/a[contains(@href,'viewItem')]")).getText();
 
-        String productID =driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td[2]")).getText();
-        String description = driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td[3]")).getText();
-        String inStock = driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td[4]")).getText();
-        String quantity = driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td[5]")).getText();
-        String listPrice = driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td[6]")).getText();
-        String totalCoast = driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td[7]")).getText();
+        String productID = driver.findElement(By.xpath("//tr[" + (shoppingList.size() + 2) + "]/td[2]")).getText();
+        String description = driver.findElement(By.xpath("//tr[" + (shoppingList.size() + 2) + "]/td[3]")).getText();
+        String inStock = driver.findElement(By.xpath("//tr[" + (shoppingList.size() + 2) + "]/td[4]")).getText();
+        String quantity = driver.findElement(By.xpath("//tr[" + (shoppingList.size() + 2) + "]/td[5]")).getText();
+        String listPrice = driver.findElement(By.xpath("//tr[" + (shoppingList.size() + 2) + "]/td[6]")).getText();
+        String totalCoast = driver.findElement(By.xpath("//tr[" + (shoppingList.size() + 2) + "]/td[7]")).getText();
         return new Product(itemID, productID, description, inStock, quantity, listPrice, totalCoast);
     }
 
@@ -89,7 +94,17 @@ public class ShoppingCartPage extends BasePage {
         return updatedFishTotalCost + updatedDogTotalCost + updatedCatTotalCost + updatedReptileTotalCost + updatedBirdTotalCost;
     }
 
-    public Float takeSubTotalValue(List<Product> shoppingList){
-        return Float.parseFloat(driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td[1]")).getText().substring(12));
+    public Float takeSubTotalValue(List<Product> shoppingList) {
+        return Float.parseFloat(driver.findElement(By.xpath("//tr[" + (shoppingList.size() + 2) + "]/td[1]")).getText().substring(12));
     }
+
+    public void proceedToCheckout() {
+        waitForVisibility(proceedToCheckoutButton);
+        clickOnElement(proceedToCheckoutButton);
+        waitUntilUrlContainsText("Order.action");
+        log.info("User switched to checkout");
+
+    }
+
+
 }

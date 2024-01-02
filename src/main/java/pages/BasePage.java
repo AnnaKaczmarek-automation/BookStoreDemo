@@ -103,13 +103,9 @@ public class BasePage {
         }
     }
 
-    public void waitForInvisibilityOfElement(WebElement element) {
-        wait.until(ExpectedConditions.invisibilityOf(element));
-    }
 
     public String takeWebElementText(WebElement element) {
-        String value = element.getText();
-        return value;
+        return element.getText();
     }
 
     public void highlightElements(WebElement element) {
@@ -120,6 +116,11 @@ public class BasePage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public void waitUntilUrlContainsText(String text){
+        wait.until(ExpectedConditions.urlContains(text));
+        log.info("URL contains correct text");
     }
 
 }

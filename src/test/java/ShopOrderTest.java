@@ -16,6 +16,8 @@ public class ShopOrderTest extends TestBase {
     protected CatsCategoryPage catsCategoryPage;
     protected ReptilesCategoryPage reptilesCategoryPage;
     protected BirdsCategoryPage birdsCategoryPage;
+    protected LoginPage loginPage;
+    protected CheckoutPage checkoutPage;
 
 
     @Test
@@ -27,9 +29,13 @@ public class ShopOrderTest extends TestBase {
         catsCategoryPage = new CatsCategoryPage(driver);
         reptilesCategoryPage = new ReptilesCategoryPage(driver);
         birdsCategoryPage = new BirdsCategoryPage(driver);
+        loginPage = new LoginPage(driver);
+        checkoutPage = new CheckoutPage(driver);
 
         Logger log = LoggerFactory.getLogger("ShopOrderTest.class");
-
+        homePage.clickOnSignIn();
+        loginPage.logIn();
+        log.info("User was logged in");
         List<Product> shoppingList = new ArrayList<>();
         homePage.openCategory("fish");
         fishCategoryPage.chooseRandomFish();
@@ -89,5 +95,10 @@ public class ShopOrderTest extends TestBase {
         float expectedSubTotalValue = shoppingCartPage.countSubTotalValue(updatedFishTotalCost, updatedDogTotalCost, updatedCatTotalCost,updatedReptileTotalCost, updatedBirdTotalCost);
         float actualSubTotalValue = shoppingCartPage.takeSubTotalValue(shoppingList);
         Assertions.assertThat(actualSubTotalValue).isEqualTo(expectedSubTotalValue);
+
+        shoppingCartPage.proceedToCheckout();
+        checkoutPage.verifyPaymentDetails("MasterCard");
+        checkoutPage.verifyBillingAddress(false);
+
     }
 }

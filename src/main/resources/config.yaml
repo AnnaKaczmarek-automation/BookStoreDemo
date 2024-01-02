@@ -9,5 +9,7 @@ environment:
     envName: test1
     appUrl: https://petstore.octoperf.com/actions/Catalog.action
     eTitle: Selenium
+    userName: TestingAccount
+    password: Abc!123
 
 

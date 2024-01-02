@@ -11,7 +11,7 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
-    @FindBy(css = "#stripes--1487809608")
+    @FindBy(css = "[name='username']")
     private WebElement userNameField;
 
     @FindBy(xpath = "//input[@name='password']")

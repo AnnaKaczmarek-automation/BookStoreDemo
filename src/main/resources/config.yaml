@@ -11,5 +11,27 @@ environment:
     eTitle: Selenium
     userName: TestingAccount
     password: Abc!123
+    firstName: Tester
+    lastName: Tester
+    address1: Test Street
+    address2: 1
+    city: City
+    state: State
+    zip: 00-000
+    country: Country
+    cardType: American Express
+    cardNumber: 999 9999 9999 9999
+    expiryDate: 03/2030
+    shippingAddress: true
+    shipToFirstName: shipFirstName
+    shipToLastName: shipLastName
+    shipToAddress1: Ship Street
+    shipToAddress2: 2
+    shipToCity: CityShip
+    shipToState: StateShip
+    shipToZip: 11-111
+    shipToCountry: CountryShip
+
+
 
 

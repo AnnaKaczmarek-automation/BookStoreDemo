@@ -2,11 +2,7 @@ package helpers;
 
 import com.github.javafaker.Faker;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import pages.BasePage;
-import org.apache.commons.lang3.RandomStringUtils;
-
 import java.util.List;
 import java.util.Random;
 
@@ -34,11 +30,9 @@ public class DataCreator {
     public String createRandomIdNumber() {
         return faker.idNumber().toString();
     }
-
     public String createRandomEmail(String name) {
         return name + "@example.com";
     }
-
     public long createRandomPhoneNumber() {
         return faker.number().randomNumber(9, true);
     }
@@ -60,7 +54,6 @@ public class DataCreator {
     public String createRandomCountry() {
         return faker.address().country();
     }
-
     public Integer createRandomNumber(int minNumber, int maxNumber) {
         return faker.number().numberBetween(minNumber, maxNumber);
     }

@@ -1,0 +1,20 @@
+[main] I ApplicationProperties.class - ( Amount of loaded environment properties is: 25
+[main] I ApplicationProperties.class - ( Amount of loaded browser properties is: 3
+[main] D i.g.bonigarcia.wdm.WebDriverManager - ( Using WebDriverManager 5.5.3
+[main] D i.g.b.wdm.cache.ResolutionCache - ( Resolution chrome=120 in cache (valid until 13:33:22 03/01/2024 CET)
+[main] D i.g.b.wdm.cache.ResolutionCache - ( Resolution chrome120=120.0.6099.109 in cache (valid until 13:27:36 04/01/2024 CET)
+[main] I i.g.bonigarcia.wdm.WebDriverManager - ( Using chromedriver 120.0.6099.109 (resolved driver for Chrome 120)
+[main] D i.g.bonigarcia.wdm.WebDriverManager - ( Driver chromedriver 120.0.6099.109 found in cache
+[main] I i.g.bonigarcia.wdm.WebDriverManager - ( Exporting webdriver.chrome.driver as C:\Users\akaczmarek2\.cache\selenium\chromedriver\win64\120.0.6099.109\chromedriver.exe
+[main] I BasePage.class - ( User name was typed in
+[main] I BasePage.class - ( Password was typed in
+[main] I BasePage.class - ( Login button was clicked
+[main] I ShopOrderTest.class - ( User was logged in
+[main] I BasePage.class - ( Fish option was found and clicked
+[main] I BasePage.class - ( Random fish was chosen from main category
+[main] I BasePage.class - ( Random fish was chosen from sub category
+[main] I BasePage.class - ( URL contains correct text
+[main] I BasePage.class - ( User switched to checkout
+[main] I BasePage.class - ( Card number value was typed in
+[main] I BasePage.class - ( Card number value was typed in
+[main] I BasePage.class - ( 'Continue' button was clicked

@@ -48,19 +48,23 @@ public class ShoppingCartPage extends BasePage {
     private WebElement proceedToCheckoutButton;
 
 
-    public void setRandomProductQuantity(List<Product> shoppingList) throws InterruptedException {
+    public Integer setRandomProductQuantity(List<Product> shoppingList) throws InterruptedException {
         log.info("Shopping list has size: " + shoppingList.size());
         waitForVisibility(shoppingCartSection);
         int quantity = dataCreator.createRandomNumber(2, 10);
         WebElement quantityValue = driver.findElement(By.xpath("//tr[" + (shoppingList.size() + 2) + "]/td[5]/input"));
         waitForVisibility(quantityValue);
-//        String oldValue1 = driver.findElement(By.xpath("//tr[" + (shoppingList.size()+2) + "]/td[7]")).getText();
         sendTextToField(quantityValue, String.valueOf(quantity));
         actions.sendKeys(Keys.ENTER).build().perform();
         waitUntilElementIsClickable(updateCartButton);
         clickOnElement(updateCartButton);
         Thread.sleep(3000);
         log.info("Product amount was updated into --> " + quantityInput.getAttribute("value"));
+        return quantity;
+    }
+
+    public Integer takeProductsQuantity(){
+        return Integer.parseInt(quantityField.getText());
     }
 
     public Float takeProductsTotalCost(List<Product> shoppingList) throws InterruptedException {

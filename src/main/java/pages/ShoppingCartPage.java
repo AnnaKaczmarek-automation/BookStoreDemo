@@ -38,7 +38,7 @@ public class ShoppingCartPage extends BasePage {
     private WebElement descriptionField;
     @FindBy(xpath = "//tr/td[4]")
     private WebElement inStockField;
-    @FindBy(xpath = "//tr/td[5]")
+    @FindBy(xpath = "//tr/td[5]/input")
     private WebElement quantityField;
     @FindBy(xpath = "//tr/td[6]")
     private WebElement listPriceField;
@@ -64,7 +64,7 @@ public class ShoppingCartPage extends BasePage {
     }
 
     public Integer takeProductsQuantity(){
-        return Integer.parseInt(quantityField.getText());
+        return Integer.parseInt(quantityField.getAttribute("value"));
     }
 
     public Float takeProductsTotalCost(List<Product> shoppingList) throws InterruptedException {

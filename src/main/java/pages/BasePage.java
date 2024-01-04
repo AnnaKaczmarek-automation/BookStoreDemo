@@ -121,6 +121,7 @@ public class BasePage {
     public void waitUntilUrlContainsText(String text){
         wait.until(ExpectedConditions.urlContains(text));
         log.info("URL contains correct text");
+        driver.switchTo().defaultContent();
     }
 
 }

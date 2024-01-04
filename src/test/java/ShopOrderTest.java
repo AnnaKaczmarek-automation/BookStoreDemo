@@ -19,6 +19,7 @@ public class ShopOrderTest extends TestBase {
     protected LoginPage loginPage;
     protected CheckoutPage checkoutPage;
     protected OrderPage orderPage;
+    protected OrderConfirmationPage orderConfirmationPage;
 
 
     @Test
@@ -99,13 +100,14 @@ public class ShopOrderTest extends TestBase {
     }
 
     @Test
-    public void checkoutTest() throws InterruptedException {
+    public void checkoutTest() {
         homePage = new HomePage(driver);
         fishCategoryPage = new FishCategoryPage(driver);
         checkoutPage = new CheckoutPage(driver);
         loginPage = new LoginPage(driver);
         shoppingCartPage = new ShoppingCartPage(driver);
         orderPage = new OrderPage(driver);
+        orderConfirmationPage = new OrderConfirmationPage(driver);
 
         Logger log = LoggerFactory.getLogger("ShopOrderTest.class");
         homePage.clickOnSignIn();
@@ -113,6 +115,12 @@ public class ShopOrderTest extends TestBase {
         log.info("User was logged in");
         homePage.openCategory("fish");
         fishCategoryPage.chooseRandomFish();
+        List<Product> shoppingList = new ArrayList<>();
+        Product fish = shoppingCartPage.createNewProduct(shoppingList);
+        shoppingList.add(fish);
+        log.info("list size: " + shoppingList.size());
+        int quantityInShoppingCart = shoppingCartPage.takeProductsQuantity();
+        float totalPriceInShoppingCart = shoppingCartPage.takeSubTotalValue(shoppingList);
 
         shoppingCartPage.proceedToCheckout();
         checkoutPage.insertCardType(System.getProperty("cardType"));
@@ -129,6 +137,24 @@ public class ShopOrderTest extends TestBase {
         Assertions.assertThat(checkoutPage.takeZipValueFromCheckout()).isEqualTo(System.getProperty("zip"));
         Assertions.assertThat(checkoutPage.takeCountryValueFromCheckout()).isEqualTo(System.getProperty("country"));
 
+        String firstNameBillingValueFromCheckout;
+        String lastNameBillingValueFromCheckout;
+        String address1BillingValueFromCheckout;
+        String address2BillingValueFromCheckout;
+        String cityBillingValueFromCheckout;
+        String stateBillingValueFromCheckout;
+        String zipBillingValueFromCheckout;
+        String countryBillingValueFromCheckout;
+        String firstNameShippingValueFromCheckout = null;
+        String lastNameShippingValueFromCheckout = null;
+        String address1ShippingValueFromCheckout = null;
+        String address2ShippingValueFromCheckout = null;
+        String cityShippingValueFromCheckout = null;
+        String stateShippingValueFromCheckout = null;
+        String zipShippingValueFromCheckout = null;
+        String countryShippingValueFromCheckout = null;
+        String orderHeaderInCheckout = null;
+
         if (Boolean.parseBoolean(System.getProperty("shippingAddress"))) {
             checkoutPage.markShipToDifferentAddressOption();
 
@@ -143,37 +169,99 @@ public class ShopOrderTest extends TestBase {
                     .insertShippingCountry();
             checkoutPage.choseContinueButton();
             basePage.waitUntilUrlContainsText("Order.action");
-            //pojawia sie windowsowy pop-up. trzeba go zamknąć.
-            Assertions.assertThat(orderPage.takeFirstNameBillingValueFromCheckout()).isEqualTo(System.getProperty("firstName"));
-            Assertions.assertThat(orderPage.takeLastNameBillingValueFromCheckout()).isEqualTo(System.getProperty("lastName"));
-            Assertions.assertThat(orderPage.takeAddress1BillingValueFromCheckout()).isEqualTo(System.getProperty("address1"));
-            Assertions.assertThat(orderPage.takeAddress2BillingValueFromCheckout()).isEqualTo(System.getProperty("address2"));
-            Assertions.assertThat(orderPage.takeCityBillingValueFromCheckout()).isEqualTo(System.getProperty("city"));
-            Assertions.assertThat(orderPage.takeStateBillingValueFromCheckout()).isEqualTo(System.getProperty("state"));
-            Assertions.assertThat(orderPage.takeZipBillingValueFromCheckout()).isEqualTo(System.getProperty("zip"));
-            Assertions.assertThat(orderPage.takeCountryBillingValueFromCheckout()).isEqualTo(System.getProperty("country"));
+            orderHeaderInCheckout = orderPage.takeOrderHeaderValue();
+            firstNameBillingValueFromCheckout = orderPage.takeFirstNameBillingValueFromCheckout();
+            lastNameBillingValueFromCheckout = orderPage.takeLastNameBillingValueFromCheckout();
+            address1BillingValueFromCheckout = orderPage.takeAddress1BillingValueFromCheckout();
+            address2BillingValueFromCheckout = orderPage.takeAddress2BillingValueFromCheckout();
+            cityBillingValueFromCheckout = orderPage.takeCityBillingValueFromCheckout();
+            stateBillingValueFromCheckout = orderPage.takeStateBillingValueFromCheckout();
+            zipBillingValueFromCheckout = orderPage.takeZipBillingValueFromCheckout();
+            countryBillingValueFromCheckout = orderPage.takeCountryBillingValueFromCheckout();
+            Assertions.assertThat(firstNameBillingValueFromCheckout).isEqualTo(System.getProperty("firstName"));
+            Assertions.assertThat(lastNameBillingValueFromCheckout).isEqualTo(System.getProperty("lastName"));
+            Assertions.assertThat(address1BillingValueFromCheckout).isEqualTo(System.getProperty("address1"));
+            Assertions.assertThat(address2BillingValueFromCheckout).isEqualTo(System.getProperty("address2"));
+            Assertions.assertThat(cityBillingValueFromCheckout).isEqualTo(System.getProperty("city"));
+            Assertions.assertThat(stateBillingValueFromCheckout).isEqualTo(System.getProperty("state"));
+            Assertions.assertThat(zipBillingValueFromCheckout).isEqualTo(System.getProperty("zip"));
+            Assertions.assertThat(countryBillingValueFromCheckout).isEqualTo(System.getProperty("country"));
 
-            Assertions.assertThat(orderPage.takeFirstNameShippingValueFromCheckout()).isEqualTo(System.getProperty("shipToFirstName"));
-            Assertions.assertThat(orderPage.takeLastNameShippingValueFromCheckout()).isEqualTo(System.getProperty("shipToLastName"));
-            Assertions.assertThat(orderPage.takeAddress1ShippingValueFromCheckout()).isEqualTo(System.getProperty("shipToAddress1"));
-            Assertions.assertThat(orderPage.takeAddress2ShippingValueFromCheckout()).isEqualTo(System.getProperty("shipToAddress2"));
-            Assertions.assertThat(orderPage.takeCityShippingValueFromCheckout()).isEqualTo(System.getProperty("shipToCity"));
-            Assertions.assertThat(orderPage.takeStateShippingValueFromCheckout()).isEqualTo(System.getProperty("shipToState"));
-            Assertions.assertThat(orderPage.takeZipShippingValueFromCheckout()).isEqualTo(System.getProperty("shipToZip"));
-            Assertions.assertThat(orderPage.takeCountryShippingValueFromCheckout()).isEqualTo(System.getProperty("shipToCountry"));
-        }else{
+            firstNameShippingValueFromCheckout = orderPage.takeFirstNameShippingValueFromCheckout();
+            lastNameShippingValueFromCheckout = orderPage.takeLastNameShippingValueFromCheckout();
+            address1ShippingValueFromCheckout = orderPage.takeAddress1ShippingValueFromCheckout();
+            address2ShippingValueFromCheckout = orderPage.takeAddress2ShippingValueFromCheckout();
+            cityShippingValueFromCheckout = orderPage.takeCityShippingValueFromCheckout();
+            stateShippingValueFromCheckout = orderPage.takeStateShippingValueFromCheckout();
+            zipShippingValueFromCheckout = orderPage.takeZipShippingValueFromCheckout();
+            countryShippingValueFromCheckout = orderPage.takeCountryShippingValueFromCheckout();
+            Assertions.assertThat(firstNameShippingValueFromCheckout).isEqualTo(System.getProperty("shipToFirstName"));
+            Assertions.assertThat(lastNameShippingValueFromCheckout).isEqualTo(System.getProperty("shipToLastName"));
+            Assertions.assertThat(address1ShippingValueFromCheckout).isEqualTo(System.getProperty("shipToAddress1"));
+            Assertions.assertThat(address2ShippingValueFromCheckout).isEqualTo(System.getProperty("shipToAddress2"));
+            Assertions.assertThat(cityShippingValueFromCheckout).isEqualTo(System.getProperty("shipToCity"));
+            Assertions.assertThat(stateShippingValueFromCheckout).isEqualTo(System.getProperty("shipToState"));
+            Assertions.assertThat(zipShippingValueFromCheckout).isEqualTo(System.getProperty("shipToZip"));
+            Assertions.assertThat(countryShippingValueFromCheckout).isEqualTo(System.getProperty("shipToCountry"));
+        } else {
             checkoutPage.choseContinueButton();
-            Assertions.assertThat(orderPage.takeFirstNameBillingValueFromCheckout()).isEqualTo(System.getProperty("firstName"));
-            Assertions.assertThat(orderPage.takeLastNameBillingValueFromCheckout()).isEqualTo(System.getProperty("lastName"));
-            Assertions.assertThat(orderPage.takeAddress1BillingValueFromCheckout()).isEqualTo(System.getProperty("address1"));
-            Assertions.assertThat(orderPage.takeAddress2BillingValueFromCheckout()).isEqualTo(System.getProperty("address2"));
-            Assertions.assertThat(orderPage.takeCityBillingValueFromCheckout()).isEqualTo(System.getProperty("city"));
-            Assertions.assertThat(orderPage.takeStateBillingValueFromCheckout()).isEqualTo(System.getProperty("state"));
-            Assertions.assertThat(orderPage.takeZipBillingValueFromCheckout()).isEqualTo(System.getProperty("zip"));
-            Assertions.assertThat(orderPage.takeCountryBillingValueFromCheckout()).isEqualTo(System.getProperty("country"));
+            firstNameBillingValueFromCheckout = orderPage.takeFirstNameBillingValueFromCheckout();
+            lastNameBillingValueFromCheckout = orderPage.takeLastNameBillingValueFromCheckout();
+            address1BillingValueFromCheckout = orderPage.takeAddress1BillingValueFromCheckout();
+            address2BillingValueFromCheckout = orderPage.takeAddress2BillingValueFromCheckout();
+            cityBillingValueFromCheckout = orderPage.takeCityBillingValueFromCheckout();
+            stateBillingValueFromCheckout = orderPage.takeStateBillingValueFromCheckout();
+            zipBillingValueFromCheckout = orderPage.takeZipBillingValueFromCheckout();
+            countryBillingValueFromCheckout = orderPage.takeCountryBillingValueFromCheckout();
+            Assertions.assertThat(firstNameBillingValueFromCheckout).isEqualTo(System.getProperty("firstName"));
+            Assertions.assertThat(lastNameBillingValueFromCheckout).isEqualTo(System.getProperty("lastName"));
+            Assertions.assertThat(address1BillingValueFromCheckout).isEqualTo(System.getProperty("address1"));
+            Assertions.assertThat(address2BillingValueFromCheckout).isEqualTo(System.getProperty("address2"));
+            Assertions.assertThat(cityBillingValueFromCheckout).isEqualTo(System.getProperty("city"));
+            Assertions.assertThat(stateBillingValueFromCheckout).isEqualTo(System.getProperty("state"));
+            Assertions.assertThat(zipBillingValueFromCheckout).isEqualTo(System.getProperty("zip"));
+            Assertions.assertThat(countryBillingValueFromCheckout).isEqualTo(System.getProperty("country"));
         }
+        String orderHeader = orderPage.takeOrderHeaderValue();
+        orderPage.choseConfirmButton();
+        String firstNameBillingValueFromOrderConfirmation = orderConfirmationPage.takeFirstNameBillingValueFromOrderConfirmation();
+        String lastNameBillingValueFromOrderConfirmation = orderConfirmationPage.takeLastNameBillingValueFromOrderConfirmation();
+        String address1BillingValueFromOrderConfirmation = orderConfirmationPage.takeAddress1BillingValueFromOrderConfirmation();
+        String address2BillingValueFromOrderConfirmation = orderConfirmationPage.takeAddress2BillingValueFromOrderConfirmation();
+        String cityBillingValueFromOrderConfirmation = orderConfirmationPage.takeCityBillingValueFromOrderConfirmation();
+        String stateBillingValueFromOrderConfirmation = orderConfirmationPage.takeStateBillingValueFromOrderConfirmation();
+        String zipBillingValueFromOrderConfirmation = orderConfirmationPage.takeZipBillingValueFromOrderConfirmation();
+        String countryBillingValueFromOrderConfirmation = orderConfirmationPage.takeCountryBillingValueFromOrderConfirmation();
+        String firstNameShippingValueFromOrderConfirmation = orderConfirmationPage.takeFirstNameShippingValueFromOrderConfirmation();
+        String lastNameShippingValueFromOrderConfirmation = orderConfirmationPage.takeLastNameShippingValueFromOrderConfirmation();
+        String address1ShippingValueFromOrderConfirmation = orderConfirmationPage.takeAddress1ShippingValueFromOrderConfirmation();
+        String address2ShippingValueFromOrderConfirmation = orderConfirmationPage.takeAddress2ShippingValueFromOrderConfirmation();
+        String cityShippingValueFromOrderConfirmation = orderConfirmationPage.takeCityShippingValueFromOrderConfirmation();
+        String stateShippingValueFromOrderConfirmation = orderConfirmationPage.takeStateShippingValueFromOrderConfirmation();
+        String zipShippingValueFromOrderConfirmation = orderConfirmationPage.takeZipShippingValueFromOrderConfirmation();
+        String countryShippingValueFromOrderConfirmation = orderConfirmationPage.takeCountryShippingValueFromOrderConfirmation();
+        int quantityValueFromOrderConfirmation = Integer.parseInt(orderConfirmationPage.takeQuantityValueFromOrderConfirmation());
+        float totalPriceValueFromOrderConfirmation = (Float.parseFloat(orderConfirmationPage.takeTotalPriceValueFromOrderConfirmation().substring(1)));
 
-
+        Assertions.assertThat(firstNameBillingValueFromOrderConfirmation).isEqualTo(firstNameBillingValueFromCheckout);
+        Assertions.assertThat(lastNameBillingValueFromOrderConfirmation).isEqualTo(lastNameBillingValueFromCheckout);
+        Assertions.assertThat(address1BillingValueFromOrderConfirmation).isEqualTo(address1BillingValueFromCheckout);
+        Assertions.assertThat(address2BillingValueFromOrderConfirmation).isEqualTo(address2BillingValueFromCheckout);
+        Assertions.assertThat(cityBillingValueFromOrderConfirmation).isEqualTo(cityBillingValueFromCheckout);
+        Assertions.assertThat(stateBillingValueFromOrderConfirmation).isEqualTo(stateBillingValueFromCheckout);
+        Assertions.assertThat(zipBillingValueFromOrderConfirmation).isEqualTo(zipBillingValueFromCheckout);
+        Assertions.assertThat(countryBillingValueFromOrderConfirmation).isEqualTo(countryBillingValueFromCheckout);
+        Assertions.assertThat(firstNameShippingValueFromOrderConfirmation).isEqualTo(firstNameShippingValueFromCheckout);
+        Assertions.assertThat(lastNameShippingValueFromOrderConfirmation).isEqualTo(lastNameShippingValueFromCheckout);
+        Assertions.assertThat(address1ShippingValueFromOrderConfirmation).isEqualTo(address1ShippingValueFromCheckout);
+        Assertions.assertThat(address2ShippingValueFromOrderConfirmation).isEqualTo(address2ShippingValueFromCheckout);
+        Assertions.assertThat(cityShippingValueFromOrderConfirmation).isEqualTo(cityShippingValueFromCheckout);
+        Assertions.assertThat(stateShippingValueFromOrderConfirmation).isEqualTo(stateShippingValueFromCheckout);
+        Assertions.assertThat(zipShippingValueFromOrderConfirmation).isEqualTo(zipShippingValueFromCheckout);
+        Assertions.assertThat(countryShippingValueFromOrderConfirmation).isEqualTo(countryShippingValueFromCheckout);
+        Assertions.assertThat(totalPriceValueFromOrderConfirmation).isEqualTo(totalPriceInShoppingCart);
+        Assertions.assertThat(quantityValueFromOrderConfirmation).isEqualTo(quantityInShoppingCart);
+        Assertions.assertThat(orderHeader).isEqualTo(orderHeaderInCheckout);
     }
 
 

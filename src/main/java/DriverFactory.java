@@ -8,6 +8,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.HashMap;
 import java.util.Map;
 
 public class DriverFactory {
@@ -27,6 +29,12 @@ public class DriverFactory {
                 optionsChrome.addArguments("start-maximized");
                 optionsChrome.addArguments("disable-infobars");
                 optionsChrome.addArguments("--disable-extensions");
+                optionsChrome.addArguments("disable-notifications");
+                optionsChrome.addArguments("autofill.profile_enabled");
+                Map<String, Object> prefs = new HashMap<String, Object>();
+                prefs.put("credentials_enable_service", false);
+                prefs.put("autofill.profile_enabled", false);
+                optionsChrome.setExperimentalOption("prefs", prefs);
                 driver = new ChromeDriver(optionsChrome);
                 driver.get(System.getProperty("appUrl"));
                 break;
@@ -36,6 +44,8 @@ public class DriverFactory {
                 optionsFirefox.addArguments("start-maximized");
                 optionsFirefox.addArguments("disable-infobars");
                 optionsFirefox.addArguments("--disable-extensions");
+                optionsFirefox.addArguments("disable-notifications");
+                optionsFirefox.addArguments("autofill.profile_enabled");
                 driver = new FirefoxDriver(optionsFirefox);
                 driver.get(System.getProperty("appUrl"));
                 break;

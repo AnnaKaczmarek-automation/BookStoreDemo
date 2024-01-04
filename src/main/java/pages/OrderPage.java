@@ -9,38 +9,42 @@ public class OrderPage extends BasePage{
         super(driver);
     }
 
-    @FindBy(css = "//tbody/tr[3]/td[2]")
+    @FindBy(xpath = "//tbody/tr[3]/td[2]")
     private WebElement firstNameBilling;
-    @FindBy(css = "//tbody/tr[4]/td[2]")
+    @FindBy(xpath = "//tbody/tr[4]/td[2]")
     private WebElement lastNameBilling;
-    @FindBy(css = "//tbody/tr[5]/td[2]")
+    @FindBy(xpath = "//tbody/tr[5]/td[2]")
     private WebElement address1Billing;
-    @FindBy(css = "//tbody/tr[6]/td[2]")
+    @FindBy(xpath = "//tbody/tr[6]/td[2]")
     private WebElement address2Billing;
-    @FindBy(css = "//tbody/tr[7]/td[2]")
+    @FindBy(xpath = "//tbody/tr[7]/td[2]")
     private WebElement cityBilling;
-    @FindBy(css = "//tbody/tr[8]/td[2]")
+    @FindBy(xpath = "//tbody/tr[8]/td[2]")
     private WebElement stateBilling;
-    @FindBy(css = "//tbody/tr[9]/td[2]")
+    @FindBy(xpath = "//tbody/tr[9]/td[2]")
     private WebElement zipBilling;
-    @FindBy(css = "//tbody/tr[10]/td[2]")
+    @FindBy(xpath = "//tbody/tr[10]/td[2]")
     private WebElement countryBilling;
-    @FindBy(css = "//tbody/tr[12]/td[2]")
+    @FindBy(xpath = "//tbody/tr[12]/td[2]")
     private WebElement firstNameShipping;
-    @FindBy(css = "//tbody/tr[13]/td[2]")
+    @FindBy(xpath = "//tbody/tr[13]/td[2]")
     private WebElement lastNameShipping;
-    @FindBy(css = "//tbody/tr[14]/td[2]")
+    @FindBy(xpath = "//tbody/tr[14]/td[2]")
     private WebElement address1Shipping;
-    @FindBy(css = "//tbody/tr[15]/td[2]")
+    @FindBy(xpath = "//tbody/tr[15]/td[2]")
     private WebElement address2Shipping;
-    @FindBy(css = "//tbody/tr[16]/td[2]")
+    @FindBy(xpath = "//tbody/tr[16]/td[2]")
     private WebElement cityShipping;
-    @FindBy(css = "//tbody/tr[17]/td[2]")
+    @FindBy(xpath = "//tbody/tr[17]/td[2]")
     private WebElement stateShipping;
-    @FindBy(css = "//tbody/tr[18]/td[2]")
+    @FindBy(xpath = "//tbody/tr[18]/td[2]")
     private WebElement zipShipping;
-    @FindBy(css = "//tbody/tr[19]/td[2]")
+    @FindBy(xpath = "//tbody/tr[19]/td[2]")
     private WebElement countryShipping;
+    @FindBy(xpath = "//a[text()='Confirm']")
+    private WebElement confirmButton;
+    @FindBy(css = "tr th[align='center']")
+    private WebElement orderHeader;
 
     public String takeFirstNameBillingValueFromCheckout() {
         waitForVisibility(firstNameBilling);
@@ -113,5 +117,13 @@ public class OrderPage extends BasePage{
         return countryShipping.getText();
     }
 
+  public void choseConfirmButton(){
+        waitForVisibility(confirmButton);clickOnElement(confirmButton);
+        log.info("'Confirm' button was clicked");
+  }
+  public String takeOrderHeaderValue(){
+        waitForVisibility(orderHeader);
+        return  orderHeader.getText();
+  }
 
     }
